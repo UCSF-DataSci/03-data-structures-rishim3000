@@ -42,6 +42,17 @@ def find_greatest_product(number_string, adjacent_digits=13):
     max_product = 0
     
     # Your code here
+    start_number = 0 #first number
+    end_number = adjacent_digits - 1 #13th number bc of indexing
+
+    while end_number <= len(number_string):
+        set_of_13 = number_string[start_number:end_number]
+        set_product = 1
+        for char in set_of_13:
+            set_product = set_product * int(char)
+        start_number = start_number + 1
+        end_number = end_number + 1
+        max_product = max(max_product, set_product)    
 
     return max_product
 
