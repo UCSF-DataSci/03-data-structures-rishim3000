@@ -16,18 +16,21 @@ from datetime import date
 
 
 quotes = [
-    # Create a list of quotes here
+    "I'm not superstitious, but I'm a little stitous.",
+    "Well well well, how the turntables...",
+    "Bears. Beets. Battlestar Galactica.",
+    "Boy, have you lost your mind, 'cause I'll help you find it!",
+    "I am running away from my responsibilities, and it feels good."
 ]
 
 def get_quote_of_the_day(quotes):
     todays_quote = None
 
     # Your code here
-    
+    todays_quote = random.choice(quotes)
     return todays_quote
 
 if __name__ == "__main__":
     print(get_quote_of_the_day(quotes))
 
-# Cron job (add this to your crontab):
-# 0 8 * * * /usr/bin/python3 /path/to/quote_generator.py >> /path/to/daily_quote.txt
+#0 8 * * * /workspaces/03-data-structures-rishim3000/01-daily_quote.py >> /workspaces/03-data-structures-rishim3000/01-daily_quote.txt
